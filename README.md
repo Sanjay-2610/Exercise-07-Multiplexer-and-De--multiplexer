@@ -28,10 +28,14 @@ If the control input is changed to 11, then all gates are restricted except the 
 
 ## What is Demultiplexer?
 De-multiplexer is also a device with one input and multiple output lines. It is used to send a signal to one of the many devices. The main difference between a multiplexer and a de-multiplexer is that a multiplexer takes two or more signals and encodes them on a wire, whereas a de-multiplexer does reverse to what the multiplexer does.
+
 ![image](https://user-images.githubusercontent.com/36288975/170912606-a30e4b74-1726-4430-b245-2c3c3d9c232d.png)
+
 Figure 3 De-multiplexer 
 1-4 Demultiplexer
-The 1-to-4 demultiplexer comprises 1- input bit, 4-output bits, and control bits. The 1X4 demultiplexer circuit diagram is shown below.![image](https://user-images.githubusercontent.com/36288975/170912683-00fb746a-1d45-4023-91d1-3a70b841073c.png)
+The 1-to-4 demultiplexer comprises 1- input bit, 4-output bits, and control bits. The 1X4 demultiplexer circuit diagram is shown below.
+
+![image](https://user-images.githubusercontent.com/36288975/170912683-00fb746a-1d45-4023-91d1-3a70b841073c.png)
 
 ![image](https://user-images.githubusercontent.com/36288975/170912741-7cbd52af-7e0d-4be3-b5c6-6fb9c4eca7c9.png)
 
@@ -52,37 +56,66 @@ If the control input changes to AB = 10, then all the gates are restricted excep
 
 
 ### PROGRAM 
+```verilog
+# Multiplexer
 /*
 Program for flipflops  and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
+Developed by: Sanjay Ragavendar M K 
+RegisterNumber: 21222210045
 */
-
-
-
-
-
-
+module mux (s0,s1,a0,a1,a2,a3,y);
+input s0,s1,a0,a1,a2,a3;
+output y;
+wire a,b,c,d,s0bar,s1bar;
+not (s0bar,s0);
+not (s1bar,s1);
+and (a,s0,s1,a3);
+and (b,s0bar,s1,a2);
+and (c,s0,s1bar,a1);
+and (d,s0bar,s1bar,a0);
+or (y,a,b,c,d);
+endmodule
+```
+```verilog
+## De-multiplexer
+/*
+Program for flipflops  and verify its truth table in quartus using Verilog programming.
+Developed by: Sanjay Ragavendar M K 
+RegisterNumber: 21222210045
+*/
+module de_mux (y0,y1,y2,y3,a,b,i);
+input a,b,i;
+output y0,y1,y2,y3;
+wire abar,bbar;
+nor(abar,a);
+nor(bbar,b);
+and(y0,i,bbar,abar);
+and(y1,i,b,abar);
+and(y2,i,a,bbar);
+and(y3,i,a,b);
+endmodule
+```
 ### RTL LOGIC  
+### Multiplexer
+![image](https://github.com/Sanjay-2610/Exercise-07-Multiplexer-and-De--multiplexer/assets/91368803/27984fe7-ee42-411a-953f-230b034b0fed)
 
-
-
-
-
-
-
+### De-Multiplexer
 
 ### TIMING DIGRAMS  
-
-
+### Multiplexer
+![image](https://github.com/Sanjay-2610/Exercise-07-Multiplexer-and-De--multiplexer/assets/91368803/3ff08e89-f3f6-4a69-b1e4-00cd4fe9d12c)
+### De-Multiplexer
 
 
 
 ### TRUTH TABLE 
-
-
+### Multiplexer
+![image](https://github.com/Sanjay-2610/Exercise-07-Multiplexer-and-De--multiplexer/assets/91368803/f01a7375-cf39-4c5c-8d3b-bc7810bd1469)
+### De-Multiplexer
+![image](https://github.com/Sanjay-2610/Exercise-07-Multiplexer-and-De--multiplexer/assets/91368803/96c74a40-dae9-4b34-bb84-4429d5a08ebe)
 
 
 
 
 ### RESULTS 
+Thus the program executed successfully.
