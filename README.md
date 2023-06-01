@@ -100,13 +100,13 @@ endmodule
 ![image](https://github.com/Sanjay-2610/Exercise-07-Multiplexer-and-De--multiplexer/assets/91368803/27984fe7-ee42-411a-953f-230b034b0fed)
 
 ### De-Multiplexer
+![image](https://github.com/Sanjay-2610/Exercise-07-Multiplexer-and-De--multiplexer/assets/91368803/56a9716f-5c2b-4745-95a6-3c17917fd4af)
 
 ### TIMING DIGRAMS  
 ### Multiplexer
 ![image](https://github.com/Sanjay-2610/Exercise-07-Multiplexer-and-De--multiplexer/assets/91368803/3ff08e89-f3f6-4a69-b1e4-00cd4fe9d12c)
 ### De-Multiplexer
-
-
+![de_mux_wave](https://github.com/Sanjay-2610/Exercise-07-Multiplexer-and-De--multiplexer/assets/91368803/01936322-f956-422a-8490-347e283bd5a8)
 
 ### TRUTH TABLE 
 ### Multiplexer
